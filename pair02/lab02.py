@@ -83,20 +83,3 @@ print("Результат:", " ".join(result))
 
 #4
 
-width = int(input("Введіть ширину width: "))
-height = int(input("Введіть висоту height: "))
-border_char = input("Введіть символ контуру: ")
-inner_char = input("Введіть символ всередині: ")
-
-if width < 3 or height < 3:
-    print("Помилка: мінімальний розмір рамки — 3х3.")
-else:
-    for i in range(height):
-        row = ""
-        for j in range(width):
-            # Якщо це перший/останній рядок або перший/останній стовпчик
-            if i == 0 or i == height - 1 or j == 0 or j == width - 1:
-                row += border_char
-            else:
-                row += inner_char
-        print(row)
